@@ -1,0 +1,27 @@
+@import "../../../vars.less";
+.@{prefix}-input-wrapper{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-bottom: .2rem;
+  font-size: .28rem;
+  align-items: flex-end;
+  border-bottom: .01rem solid @border-input-color;
+  color: @main-text-color;
+  &>.before, &>.after{
+    flex: 0 0 auto;
+  }
+  &>.before{
+    padding-left: .36rem;
+  }
+}
+.@{prefix}-mobile-input{
+  flex: 1;
+  font-size: .28rem;
+  border: none;
+  outline: none;
+  text-indent: .2rem;
+  &:disabled{
+    background-color: transparent;
+  }
+}

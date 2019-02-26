@@ -1,0 +1,139 @@
+@import "~styles/vars.less";
+@arc-size: 10px;
+@arc-border-size: 1px;
+@line-arc-top: 0.85rem;
+@tree-item-padding-left: 20px;
+.organize{
+    padding:  0.28rem 0;
+    transform: translate3d(-.3rem, -.2rem, 0);
+    &>.tree>.tree-item{
+        &:before{
+            display: none;
+        }
+        &>.x-line{
+            display: none;
+        }
+    }
+    .tree{
+        position: relative;
+        &-item{
+            position: relative;
+            padding-left: 0.5rem;
+            padding: .2rem 0 .2rem .5rem;
+            &:before{
+                content: "";
+                position: absolute;
+                height: calc(~"100% -".0rem);
+                width: @arc-border-size;
+                background-color: @main-color;
+                left: .14rem;
+                top: .5rem;
+            }
+            &:last-child{
+                &:before{
+                    display: none;
+                }
+            }
+            &:first-child{
+                transform: translate3d(0, .02rem, 0);
+            }
+            .line-arc{
+                position: absolute;
+                top: @line-arc-top;
+                left: .6rem;
+                height: calc(~"100% -"@line-arc-top);
+                .y-line{
+                    position: absolute;
+                    margin: auto;
+                    width: @arc-border-size;
+                    background-color: @main-color;
+                    height: .28rem;
+                    left: -.01rem;
+                    right: 0;
+                }
+                .line2{
+                    position: absolute;
+                    margin: auto;
+                    height: @arc-border-size;
+                    background-color: @line-color;
+                    width: 0.4rem;
+                    left: 0.08rem;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                .arc{
+                    height: @arc-size;
+                    width: @arc-size;
+                    border-radius: 50%;
+                    position: relative;
+                    background-color: @main-color;
+                    border: 2px solid @menu-text-color;
+                }
+            }
+            .x-line{
+                position: absolute;
+                width: .3rem;
+                top: .5rem;
+                left: .14rem;
+                height: .01rem;
+                background-color: @main-color;
+            }
+            .content {
+                transform: translate3d(0,.1rem,0);
+                .show {
+                    .name {
+                        display: inline-block;
+                        width: 2rem;
+                        height: 0.4rem;
+                        background: #FFF;
+                        line-height: 0.4rem;
+                        border-radius: 0.04rem;
+                        padding: 0 0.1rem;
+                        text-overflow: ellipsis;
+                    }
+                    .o {
+                        >span {
+                            display: inline-block;
+                            margin-left: 0.1rem;
+                            cursor: pointer;
+                        }
+                        .edit {
+                            color: @main-color;
+                        }
+                        .del {
+                            color: @require-color
+                        }
+                        .add-child {
+                            background-color: @main-color;
+                            color: #fff;
+                            font-size: 0.12rem;
+                            width: 0.6rem;
+                            height: 0.32rem;
+                            line-height: 0.32rem;
+                            text-align: center;
+                            border-radius: 0.04rem;
+                        }
+                    }
+                }
+                .editable {
+                    .ant-input {
+                        height: 0.38rem;
+                        width: 2rem;
+                    }
+                    >span {
+                        display: inline-block;
+                        margin-left: 0.1rem;
+                        cursor: pointer;
+                    }
+                    .edit {
+                        color: @main-color;
+                    }
+                    .del {
+                        color: @require-color
+                    }
+                }
+            }
+        }
+    }
+}

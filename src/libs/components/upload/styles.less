@@ -1,0 +1,58 @@
+@import "~styles/vars.less";
+@import "../vars.less";
+.@{prefix}-upload{
+  .d{
+    height: 188px;
+    width: 280px;
+    border: 1px solid @line-color;
+    cursor: pointer;
+    position: relative;
+    &>span{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 30px;
+      width: 30px;
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: @main-text-color3;
+    }
+    .img-wrap, .img-wrap .mask{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: center;
+      transition: all .3s;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mask .del{
+      position: absolute;
+      top: 2px;
+      right: 10px;
+      color: transparent;
+      font-size: 20px;
+    }
+    &:hover .mask{
+      background-color: rgba(0, 0, 0, .5);
+      .del{
+        color: #fff;
+      }
+    }
+    img{
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  input{
+    display: none;
+  }
+}

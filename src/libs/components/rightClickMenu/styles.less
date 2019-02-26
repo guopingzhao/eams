@@ -1,0 +1,65 @@
+@import "../vars.less";
+.@{prefix}-menu{
+  position: fixed;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(15, 79, 102, 0.2);
+  border: 1px solid rgba(196, 217, 251, 1);
+  max-height: 0;
+  overflow: hidden;
+  &.show{
+    animation: show .5s;
+  }
+  &-item{
+    line-height: .3rem;
+    color: #3068e5;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      background-color: #eff4f9;
+    }
+  }
+}
+.@{prefix}-menu-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: none;
+  &.show{
+    display: block;
+    .@{prefix}-menu{
+      max-height: 100vh;
+    }
+  }
+  &.hide{
+    display: none;
+    .@{prefix}-menu{
+      box-shadow: none;
+    }
+  }
+  .text{
+    // padding-left: 8px;
+  }
+}
+
+@keyframes show {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100vh;
+  }
+}
+
+@keyframes hide {
+  0% {
+    max-height: 100vh;
+  }
+  100% {
+    max-height: 0;
+  }
+}

@@ -1,0 +1,258 @@
+@import "~styles/vars.less";
+.in-file {
+  .search-box {
+    .ant-radio-group {
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        width: 0;
+      }
+      label {
+        border: none;
+        background: transparent;
+      }
+      .ant-radio-button-wrapper {
+        background: transparent;
+        padding: 0 0.3rem;
+      }
+      .ant-radio-button-wrapper-checked {
+        border: none;
+        box-shadow: none;
+        font-weight: 700;
+      }
+      .ant-radio-button-wrapper-checked::before {
+        display: none;
+      }
+    }
+    .diy2 {
+      width: 1.3rem;
+    }
+  }
+  .total-opera-btn {
+    padding: 0.15rem 0.2rem;
+    .ant-btn {
+      width: 0.9rem;
+      height: 0.31rem;
+      color: @main-color;
+      border: 1px solid @main-color;
+    }
+    .ant-btn:first-child {
+      margin-right: 0.2rem;
+    }
+  }
+  .bgFFF {
+    padding: 0 0 0.2rem;
+    .each-item {
+      margin-top: 0.2rem;
+      border: 1px solid #eeeeee;
+      border-radius: 4px;
+      .item-head {
+        padding: 0 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 0.6rem;
+        background-color: #f6f7fb;
+        border-bottom: 1px solid #eeeeee;
+        .time-div {
+          span {
+            display: inline-block;
+            padding-right: 0.08rem;
+          }
+          .marginL20 {
+            margin-left: 0.2rem;
+          }
+        }
+        .status-opera {
+          .status {
+            color: #fea201;
+          }
+          .ant-btn {
+            width: 0.68rem;
+            height: 0.31rem;
+            margin-left: 0.3rem;
+            border-color: @main-color;
+            color: @main-color;
+            background-color: transparent;
+          }
+          .primary {
+            color: #FFF;
+            background-color: @main-color;
+          }
+        }
+      }
+      .item-body {
+        background-color: #ffffff;
+        border-radius: 2px;
+        padding: 0.23rem 0.2rem 0;
+        .person-info {
+          >span {
+            margin-right: 0.05rem;
+          }
+          .marginL80 {
+            margin-left: 0.8rem;
+          }
+        }
+        .tip {
+          margin-top: 0.15rem;
+          color: #959595;
+          padding-bottom: 0.15rem;
+          border-bottom: 1px solid #eeeeee;
+          >span {
+            margin-right: 0.05rem;
+          }
+        }
+        .file-list {
+          padding: 0.05rem 0 0.1rem;
+          .time {
+            max-height: 1.32rem;
+            transition: all 0.5s linear;
+            overflow: hidden;
+          }
+          .time.long {
+            max-height: 5rem;
+            height: auto;
+          }
+          p {
+            margin-bottom: 0;
+            height: 0.44rem;
+            line-height: 0.44rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+          .no-info {
+            color: #959595;
+          }
+      }
+    }
+  }
+    .no-data {
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+    }
+  }
+  .more {
+    display: flex;
+    align-items: center;
+    color: @main-color;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 0.14rem;
+    cursor: pointer;
+  }
+  .jl-page {
+    margin-top: 0.3rem;
+  }
+}
+.pigeonholeModal {
+  .lots-guidang {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.1rem;
+    .ant-btn {
+      color: @main-color;
+      border:1px solid @main-color;
+      background-color: transparent;
+      height: 0.32rem;
+      padding: 0 0.1rem;
+    }
+  }
+  .ant-modal-body {
+    padding: 0 0.16rem 0.3rem;
+  }
+  .marginB10 {
+    margin: 0.1rem 0;
+    padding: 0.12rem 0.2rem;
+    background-color: #f6f7fb;
+    border-radius: 0.04rem;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    height: 0.4rem;
+    max-height: 6rem;
+    .ant-checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      >span {
+        display: flex;
+        align-items: center;
+      }
+      .maxFontNum10 {
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        width: 10em;
+      }
+    }
+    .no-wrap {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .eachspan {
+      >span {
+        text-decoration: underline;
+        display: inline-block;
+        padding: 0 0.1rem;
+      }
+    }
+    .btn-div {
+      justify-content: flex-end;
+      flex: 1;
+      color: @main-color;
+      >span {
+        margin-left: 0.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.chooseEachItem {
+  .ant-modal-close {
+    display: none;
+  }
+  .head-show {
+    padding: 0.09rem 0 0.25rem;
+    span {
+      font-weight: 700;
+    }
+    .main-color {
+      color: @main-color;
+      font-weight: normal;
+    }
+    .bold{
+      font-weight: 700;
+    }
+  }
+  .flex {
+    display: flex;
+    padding: 2px 0px 0 10px;
+    .tree-box {
+      flex: 25% 1 1;
+      height: 4.5rem;
+      overflow: auto;
+    }
+    .list-box {
+      padding-top: 0.1rem;
+      padding-left: 0.1rem;
+      flex: 75% 1 1;
+      height: 4.5rem;
+      overflow: auto;
+    }
+  }
+  .td-div.on{
+    color: @main-color;
+    font-weight: bold;
+  }
+  .ant-modal-body {
+    padding: 0 0.1rem;
+    .head-show {
+      padding: 0.2rem 0.1rem;
+      border-bottom: 1px solid #EEEEEE;
+    }
+
+  }
+}

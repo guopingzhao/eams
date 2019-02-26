@@ -1,0 +1,25 @@
+.search-list {
+    .list{
+        li{
+            display: flex;
+            align-items: center;
+            height: 36px;
+            cursor: pointer;
+            &>span{
+                flex: 1 1 33%;
+                max-width: 33.3%;
+                &:first-child{
+                    display: flex;
+                    align-items: center;
+                    &>span{
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        word-break: normal;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

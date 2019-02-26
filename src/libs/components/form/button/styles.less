@@ -1,0 +1,47 @@
+@import "../../vars.less";
+@default-color: #fff;
+.@{prefix}-button-wrapper{
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  height: .9rem;
+  font-size: .28rem;
+  align-items: center;
+  color: @default-color;
+  background-color: @main-color;
+  border: 1px solid @main-color;
+  border-radius: .06rem;
+  transition: all .3s;
+  &.white{
+    background-color: #fff;
+    border-color: #ddd;
+    color: @main-text-color;
+  }
+  &:active{
+    background-color: @active-color;
+    border-color: @active-color;
+  }
+  &>.before, &>.after{
+    flex: 0;
+  }
+  &.white{
+    background-color: @default-color;
+    border: 1px solid @main-text-color;
+    &:active{
+      background-color: @default-color;
+      border: 1px solid @main-text-color;
+    }
+  }
+}
+.@{prefix}-mobile-button{
+  height: 100%;
+  font-size: .28rem;
+  border: none;
+  outline: none;
+  margin: 0;
+  user-select: none;
+  color: @default-color;
+  background-color: transparent;
+  font-size: .32rem;
+  text-align: center;
+}

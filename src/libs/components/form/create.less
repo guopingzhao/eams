@@ -1,0 +1,17 @@
+@error-color: #f04134;
+.decorator-wrap {
+  position: relative;
+  &.validate-error {
+    border-radius: 4px;
+    // overflow: hidden;
+    .validate-error-child {
+      border-color: @error-color;
+    }
+  }
+  .error-info {
+    position: absolute;
+    color: @error-color;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}

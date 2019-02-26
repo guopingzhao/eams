@@ -1,0 +1,224 @@
+@import "~styles/vars.less";
+.pre-file{
+    // overflow: hidden;
+    .handle{
+        height: 0.6rem;
+        line-height: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        .btn {
+            position: relative;
+            width: 100%;
+            .ant-btn {
+                margin-right: 0.2rem;
+            }
+            span{
+                cursor: pointer;
+            }
+            .right-btn{
+                position: absolute;
+                right: 0px;
+                top: 10px;
+                display: flex;
+                align-items: center;
+                .ant-input {
+                    width: 2rem;
+                }
+                .ant-btn {
+                    margin-right: 0;
+                    margin-left: 0.1rem;
+                }
+            }
+        }
+    }
+    .second-btn {
+        border:1px solid @main-color;
+        color: @main-color;
+        background-color: transparent;
+    }
+    .ps-btn {
+        justify-content: space-between;
+    }
+    .search-box {
+        background-color: transparent;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .upload-progress{
+        width: 100%;
+        left: 0;
+        @title-height: 48px;
+        @h: 300px;
+        position: fixed;
+        bottom: 0;
+        height: 0;
+        background-color: #fff;
+        transition: height .3s;
+        overflow: hidden;
+        //left: -@pad-size;
+        padding: 0 @pad-size;
+        z-index: 10;
+        border-radius: 4px 4px 0 0;
+        &.show{
+            bottom: 0;
+            height: @h;
+            box-shadow: 5px -10px 20px rgba(0,0,0,0.1);
+        }
+        .title{
+            position: absolute;
+            height: @title-height;
+            width: 100%;
+            left: 0;
+            padding: 13px @pad-size;
+            border-radius: 4px 4px 0 0;
+            background: #fff;
+            color: rgba(0, 0, 0, 0.65);
+            border-bottom: 1px solid @line-color3;
+            font-size: @font-size1;
+            display: flex;
+            justify-content: space-between;
+            color: @main-text-color;
+            span{
+                font-weight: 100;
+                cursor: pointer;
+                font-size: @font-size3;
+            }
+        }
+        ul{
+            position: absolute;
+            top: @title-height;
+            left: 0;
+            padding: 0 @pad-size;
+            width: 100%;
+            height: @h - @title-height;
+            overflow: auto;
+        }
+        li{
+            height: 46px;
+            margin-top: 10px;
+            h3{
+                font-weight: 400;
+                font-size: @font-size2;
+                color: @main-text-color;
+                display: flex;
+                justify-content: space-between;
+                .ant-upload{
+                    color: @main-text-color2;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+    .right-fixed-box-mask, .upload-progress-mask{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        pointer-events: none;
+        overflow: hidden;
+        &.show{
+            pointer-events: all;
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
+    .right-fixed-box {
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        border-radius: 4px;
+        height: calc(~"100% - 40px");
+        background-color: #FFF;
+        overflow: hidden;
+        transition: all .3s;
+        width: 4rem;
+        transform: translate3d(4rem, 0, 0);
+        .tree-btn{
+            text-align: center;
+            .ant-tree-switcher, .ant-tree-checkbox{
+                display: none;
+            }
+            .ant-tree-node-content-wrapper{
+                cursor: pointer;
+                color: @main-color;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+        &.show{
+            transform: translate3d(0, 0, 0);
+            right: 20px;
+        }
+        .tip {
+            font-size: 14px;
+            line-height: 0.18rem;
+            padding: 0.2rem 0.2rem 0;
+            color: #959595;
+            color: @main-color;
+            font-weight: 700;
+        }
+        .tree-box {
+            height: calc(~"100% - 260px");
+            overflow: auto;
+            .ant-tree li span.ant-tree-switcher {
+                width: 20px;
+            }
+            .button-tip {
+                height: 0.5rem;
+                line-height: 0.5rem;
+                text-align: center;
+                color: #959595;
+            }
+            .button-tip.more {
+                cursor: pointer;
+                color: @main-color;
+            }
+        }
+        .choose-tree-box {
+            max-height: 30%;
+            overflow: auto;
+            .icon {
+                font-size: 0.1rem;
+                margin-left: 0.15rem;
+            }
+        }
+        .tip-textarea {
+            margin: 0.1rem 0.2rem 0;
+            .tip {
+                height: 0.4rem;
+                line-height: 0.25rem;
+                color: #aaaaaa;
+                padding: 0;
+                margin-bottom: 0;
+                font-weight: normal;
+            }
+            textarea {
+                resize: none;
+                margin-top: 0.05rem;
+            }
+        }
+        .btn-box{
+            display: flex;
+            justify-content: space-around;
+            padding: 0 30px;
+            .ant-btn {
+                width: 0.88rem;
+            }
+        }
+    }
+}
+.preview-modal{
+    .close{
+        color: #fff;
+        font-size: @font-size2;
+        width: auto;
+        height: auto;
+    }
+    .content{
+        padding-top: 40px;
+    }
+}

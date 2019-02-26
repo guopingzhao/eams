@@ -1,0 +1,140 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../images/login.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  .login-box {
+    width: 3.7rem;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .login-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.67rem;
+      >img {
+        max-width: 0.3rem;
+        max-height: 0.3rem;
+        margin-right: 0.2rem;
+      }
+      >p {
+        font-size: 0.2rem;
+        color: #FFF;
+        margin-bottom: 0;
+      }
+    }
+    .jl-form {
+      .jl-item-content {
+        width: 3.63rem;
+        height: 0.4rem;
+        margin-top: 0.33rem;
+        line-height: 0.4rem;
+        .jl-input-wrapper {
+          display: flex;
+          align-items: center;
+          font-size: 0.16rem;
+          padding-bottom: 0.05rem;
+          border-bottom: 1px solid #c3def1;
+          transition: all linear 0.5s ;
+          .icon {
+            font-size: 0.16rem;
+          }
+          .icon-right {
+            color: #6efa07;
+          }
+          .icon-error {
+            color: #f04134;
+          }
+          .before {
+            height: 0.4rem;
+            color: #c3def1;
+            padding-left: 0.1rem;
+          }
+          .after {
+            height: 0.4rem;
+            padding-right: 0.1rem;
+            .icon {
+              font-size: 0.12rem;
+            }
+            .icon-close {
+              color: #acb8bd;
+              font-size: 0.1rem;
+              cursor: pointer;
+            }
+            .icon-open {
+              color: #FFF;
+              font-size: 0.15rem;
+              cursor: pointer;
+            }
+          }
+          input {
+            height: 0.4rem;
+            padding: 0 0.3rem;
+            background-color: transparent;
+            color: #FFF;
+            font-size: 0.16rem;
+            border: none;
+            border-radius: 0;
+            &::placeholder{
+              font-size: 16px;
+              color: #bfbfbf;
+            }
+          }
+        }
+        .jl-input-wrapper.focus {
+          border-bottom: 2px solid #FFF;
+        }
+        .error-info {
+          margin: 0.05rem 0 0 0.75rem ;
+        }
+      }
+    }
+    .login-remember {
+      width: 1.4rem;
+      display: flex;
+      align-items: center;
+      margin-top: 0.2rem;
+      margin-left: 0.1rem;
+      color: rgb(195, 222, 241);
+      cursor: pointer;
+      .ant-checkbox {
+        margin-right: 0.32rem;
+      }
+      .ant-checkbox+span {
+        font-size: 0.16rem;
+      }
+      .ant-checkbox-inner {
+        background-color: transparent;
+        border-color: #FFF;
+      }
+    }
+    .login-btn {
+      cursor: pointer;
+      width: 2.4rem;
+      height: 0.48rem;
+      margin: 0.4rem auto 0;
+      line-height: 0.48rem;
+      background: linear-gradient(0deg, #1c8bd2 0%, #0090ff 100%), linear-gradient(#3586b9, #3586b9);
+      box-shadow: 0rem 0.02rem 0.03rem 0rem #0064ac;
+      border-radius: 0.04rem;
+      color: #FFF;
+      font-size: 0.16rem;
+      text-align: center;
+      i {
+        margin-left: 0.1rem;
+      }
+    }
+    .login-btn:hover {
+      background: rgba(0, 150, 200, 0.5);
+    }
+    .login-btn.load:hover {
+      background: linear-gradient(0deg, #1c8bd2 0%, #0090ff 100%), linear-gradient(#3586b9, #3586b9);
+    }
+  }
+}

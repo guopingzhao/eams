@@ -1,0 +1,31 @@
+@import "../vars.less";
+@title-height: .88rem;
+.@{prefix}-title {
+  padding: 0 @pad-size;
+  height: @title-height;
+  background-color: @main-color;
+  color: #fff;
+  font-size: .32rem;
+  line-height: @title-height;
+  text-align: center;
+  position: relative;
+  &>.icon {
+    position: absolute;
+    &.icon-fanhui {
+      left: @pad-size;
+    }
+    &.icon-shouye {
+      right: @pad-size;
+      font-size: .38rem;
+    }
+  }
+  &.white{
+    background-color: white;
+    color: #000;
+  }
+  .after{
+    position: absolute;
+    right: @pad-size;
+    top: 0;
+  }
+} 

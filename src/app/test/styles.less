@@ -1,0 +1,53 @@
+@import "~styles/vars.less";
+.pigeonholeModal {
+  .ant-modal-body {
+    padding: 0.3rem 0.16rem;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    max-height: 6rem;
+    .no-wrap {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-div {
+      justify-content: flex-end;
+      flex: 0.5;
+      color: @main-color;
+      >span {
+        margin-left: 0.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.chooseEachItem {
+  .ant-modal-close {
+    display: none;
+  }
+  .head-show {
+    padding: 0.09rem 0 0.25rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  .flex {
+    display: flex;
+    .tree-box {
+      flex: 25% 1 1;
+      height: 4.5rem;
+      overflow: auto;
+    }
+    .list-box {
+      padding-left: 0.1rem;
+      flex: 75% 1 1;
+      height: 4.5rem;
+      overflow: auto;
+    }
+  }
+}

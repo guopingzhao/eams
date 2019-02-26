@@ -1,0 +1,108 @@
+/*color*/
+@main-color: #0090ff;
+@main-text-color: #444e65;
+@main-text-color2: #0090ff;
+@main-text-color3: #c2c2c2;
+@main-text-color4: #b5b5b5;
+@main-text-color5: #292828;
+@line-color: #e1e1e1;
+@line-color2: #3068e5;
+@line-color3: #ecedee;
+@main-bg-color: #f1f5f6;
+@bg-color: #f1f5f6;
+@require-color: #ff4251;
+
+@menu-bg-color: #1d2b36;
+@menu-bg-color2: #17242b;
+@menu-line: #20313b;
+@menu-text-color: #c3def1;
+@menu-height: 48px;
+
+/*size*/
+@menu-w: 240px;
+@menu-small-w: 80px;
+@pad-size: 28px;
+@title-height: .88rem;
+@font-size1: 16px;
+@font-size2: 14px;
+@font-size3: 12px;
+@line-height: 34px;
+@head-height: 60px;
+@footer-height: 70px;
+@app-crumb-height: 60px;
+/*function*/
+.get-module-body-height (@hei: @head-height + @app-crumb-height + @pad-size * 2) {
+  min-height: calc(~"100vh -"@hei);
+  background-color: #fff;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+.getQueryStyles () {
+  margin-bottom: 20px;
+  position: relative;
+  &>div{
+    display: flex;
+    line-height: 34px;
+    width: calc(~"100% + "@pad-size * 2);
+    position: relative;
+    left: calc(~"0px -"@pad-size);
+    background-color: #fff;
+    &>label{
+      display: block;
+      min-width: 158px;
+      text-indent: @pad-size;
+      flex: 0;
+      background-color: #eff4f9;
+      padding: 7px 0;
+      font-size: 14px;
+    }
+    .jl-checkbox {
+      padding: 0 18px;
+    }
+    .jl-checkbox-item{
+      padding: 0 30px;
+      cursor: default;
+      display: flex;
+      align-items: center;
+    }
+    .jl-checkbox-box{
+      cursor: pointer;
+      height: 34px;
+      border-color: transparent;
+      font-size: 14px;
+      &.on{
+        background-color: #fff;
+        color: @main-text-color2;
+      }
+    }
+  }
+  .pass{
+    border-top: 1px solid @line-color3;
+  }
+  .date{
+    border-top: 1px solid @line-color3;
+    border-bottom: 1px solid @line-color3;
+    >div {
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      &>.special-span{
+        padding: 0 16px;
+      }
+      .ant-calendar-picker {
+        width: 198px !important;
+        > div {
+          position: relative;
+          .ant-input {
+            height: 34px;
+          }
+        }
+      }
+    }
+  }
+  .result{
+    border-bottom: 1px solid @line-color3;
+  }
+}

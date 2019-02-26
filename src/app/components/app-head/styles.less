@@ -1,0 +1,61 @@
+@import "~styles/vars.less";
+.app-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  // border-bottom: 1px solid @line-color;
+  padding-left: 72px;
+  box-shadow: 0px 0px 5px 0px rgba(201, 201, 201, 0.35);
+  .search{
+    width: 180px;
+    height: 32px;
+    display: flex;
+    width: 600px;
+    align-items: center;
+    justify-content: space-between;
+    &>div{
+      flex: 0 0 50%;
+    }
+    .ant-input{
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: #f5f5f5;
+    }
+  }
+  &>div{
+    height: 100%;
+  }
+  img{
+    height: 36px;
+    width: 36px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  h1 {
+    line-height: 60px;
+    font-size: 18px;
+    color: #3068e5;
+  }
+  .user-name {
+    line-height: 36px;
+    height: 36px;
+    padding: 0 30px;
+    font-size: 16px;
+    .color-div {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 18px;
+      background: @main-color;
+      background-size: cover;
+      color: #ffffff;
+      margin-right: 8px;
+    }
+  }
+}
+.ant-dropdown-menu{
+  text-align: center;
+}

@@ -1,0 +1,281 @@
+@import "../vars.less";
+.@{prefix}-table {
+  width: 100%;
+  &-warp {
+    min-width: 100%;
+  }
+  table {
+    border-collapse: collapse;
+    min-width: 100%;
+    table-layout: fixed;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  }
+  .jl-table-thead {
+    .jl-table-thead-tr {
+      .wrap {
+        // margin-left: 0.15rem;
+        margin: auto;
+      }
+    }
+  }
+  &-th {
+    min-width: 1rem;
+    position: relative;
+    font-weight: normal;
+    &.select {
+      text-indent: .2rem;
+    }
+    & .head-text {
+      position: relative;
+      display: block;
+      &:hover:after {
+        content: attr(alt);
+        color: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 10;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, .3);
+        text-indent: 0;
+        max-width: 3rem;
+        min-width: 1rem;
+      }
+    }
+  }
+  &-thead {
+    background-color: rgb(246,247,251);
+    th {
+      height: 0.4rem;
+      color: #444e65;
+      font-size: 0.14rem;
+      font-weight: 600;
+      padding: 10px;
+      text-align: left;
+    }
+  }
+  &-tbody {
+    tr {
+      height: 0.4rem;
+      background-color: #FFF;
+      cursor: pointer;
+      border-bottom: 1px solid rgb(225, 225, 225);
+      position: relative;
+    }
+    tr:hover {
+      background: rgb(247,250,254);
+    }
+    tr.active {
+      background: rgb(247,250,254);
+      //td {
+      //  color: #3068e5;
+      //}
+    }
+    td {
+      min-width: 70px;
+      color: rgb(81,81,81);
+      font-size: 0.14rem;
+      text-align: left;
+      .opera-div {
+        display: flex;
+        align-items: center;
+        span {
+          color: rgb(0,144,255);
+          word-break: keep-all;
+        }
+        .edit {
+          color: rgb(0,144,255);
+        }
+        .del {
+          color: rgb(255, 68, 68);
+        }
+        .add-line {
+          width: 1px;
+          height: 14px;
+          padding: 0;
+          margin: 0 0.1rem;
+          background-color: rgb(0, 144, 255);
+        }
+      }
+      .openStatus {
+        color: rgb(50, 177, 108)
+      }
+      .closeStatus {
+        color: rgb(255, 68, 68);
+      }
+    }
+    .maxFontNum15 {
+      max-width: 16em;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .maxFontNum30 {
+      max-width: 31em;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .more-box{
+      position: relative;
+      width: 30px;
+      height: 46px;
+      >span {
+        padding-left: 8px;
+        line-height: 46px;
+      }
+    }
+    .maxFontNum15 {
+      max-width: 16em;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .more-box{
+      position: relative;
+      width: 30px;
+      height: 46px;
+      >span {
+        padding-left: 8px;
+        line-height: 46px;
+      }
+    }
+  }
+  &-td {
+    text-align: center;
+    // word-break: keep-all;
+    white-space: initial;
+    word-wrap: break-word;
+    padding: 0.08rem 0.1rem;
+    position: relative;
+    &.focus {
+      outline: 2px solid dodgerblue;
+    }
+    &-input {
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      outline: 0;
+      display: inline;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &-error {
+    height: 0.48rem;
+    line-height: 0.48rem;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .wrap,
+  .head-checked {
+    // margin-left: 10px;
+    margin: auto;
+    width: 0.16rem;
+    height: 0.16rem;
+    border-radius: 0.04rem;
+    border: solid 0.01rem #e1e1e1;
+    cursor: pointer;
+    &.half-select,
+    &.whole-select {
+      background-color: #108ee9;
+      border-color: #108ee9;
+      position: relative;
+    }
+    &.half-select:after {
+      transform: scale(1);
+      position: absolute;
+      top: 6px;
+      display: table;
+      width: 100%;
+      border: 2px solid #fff;
+      border-top: 0;
+      border-left: 0;
+      content: " ";
+      transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+    }
+    &.whole-select:after {
+      transform: rotate(45deg) scale(1);
+      position: absolute;
+      left: 5px;
+      top: 2px;
+      display: table;
+      width: 5px;
+      height: 8px;
+      border: 2px solid #fff;
+      border-top: 0;
+      border-left: 0;
+      content: " ";
+      transition: all .2s cubic-bezier(.12, .4, .29, 1.46) .1s;
+    }
+  }
+  .head-checked {
+    display: inline-block;
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto -18px;
+  }
+  &.switch-table {
+    .@{prefix}-table-warp{
+      overflow: auto;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+    .position-div{
+      position: relative;
+      &:hover{
+        .switch-btn{
+          display: flex;
+        }
+      }
+    }
+    .switch-btn{
+      display: none;
+      position: absolute;
+      min-height: 100%;
+      width: 30px;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      top: 0;
+      z-index: 20;
+      transition: opacity .3s;
+      pointer-events: none;
+      opacity: 0;
+      cursor: pointer;
+      &.btn-left{
+        left: 0;
+        background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1));
+        box-shadow: 6px 0 6px -4px rgba(0, 0, 0, .1);
+      }
+      &.btn-right{
+        right: 0;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1));
+        box-shadow: -6px 0 6px -4px rgba(0, 0, 0, .1);
+      }
+      &.show{
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+    table{
+      table-layout: auto;
+    }
+    .@{prefix}-table-td, .@{prefix}-table-th{
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+  }
+}

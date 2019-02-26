@@ -1,0 +1,72 @@
+@import "../vars.less";
+.@{prefix}-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .content {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    &.animation{
+      left: -100%;
+      animation-fill-mode: forwards;
+    }
+    .item {
+      height: 100%;
+      flex: 1;
+      float: left;
+    }
+    .img{
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+    &.next{
+      animation-name: next;
+    }
+    &.prev{
+      animation-name: prev;
+    }
+  }
+  .btns {
+    position: absolute;
+    top: 92%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    .btn{
+      display: inline-block;
+      width: .13rem;
+      height: .13rem;
+      border-radius: 50%;
+      vertical-align: top;
+      border-width: 1px;
+      border-style: solid;
+      margin: 0 .1rem;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+  .btn.on{
+    background-color: #000;
+  }
+}
+
+@keyframes next {
+  to {
+    transform: translate3d(calc(~"-100% / 3"), 0, 0);
+  }
+}
+
+@keyframes prev {
+  to {
+    transform: translate3d(calc(~"100% / 3"), 0, 0);
+  }
+}

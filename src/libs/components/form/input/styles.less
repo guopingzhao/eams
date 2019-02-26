@@ -1,0 +1,64 @@
+@import "../../vars.less";
+.@{prefix}-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 4px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding: 0;
+  height: 100%;
+  flex: 1 1 1px;
+  background-color: transparent;
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.error {
+    border: 1px solid #f04134 !important;
+    box-shadow: 0 0 0 2px rgba(240, 65, 52, .2) !important;
+  }
+}
+
+.@{prefix}-input-wrapper{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-bottom: .2rem;
+  font-size: .28rem;
+  align-items: flex-end;
+  border-bottom: .01rem solid @border-input-color;
+  color: @main-text-color;
+  &>.before, &>.after{
+    flex: 0 0 auto;
+  }
+  &>.before{
+    padding-left: .36rem;
+  }
+}
+.@{prefix}-mobile-input{
+  flex: 1;
+  font-size: .28rem;
+  border: none;
+  outline: none;
+  text-indent: .2rem;
+  &:disabled{
+    background-color: transparent;
+  }
+}

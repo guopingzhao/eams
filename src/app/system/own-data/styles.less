@@ -1,0 +1,44 @@
+@import "~styles/vars.less";
+.own-data{
+    .own-data-title {
+        .app-title {
+            .ant-btn {
+               position: absolute;
+                top: 0.13rem;
+                right: 0.2rem;
+                padding: 0 0.2rem;
+            }
+        }
+    }
+    &-body{
+        background-color: #fff;
+        margin-top: 28px;
+        height: 100%;
+        .get-module-body-height;
+    }
+    &-info{
+        p{
+            display: flex;
+            line-height: 48px;
+            .label{
+                flex-basis: 96px;
+                text-align: right;
+            }
+        }
+    }
+    &-password{
+        p{
+            display: flex;
+            line-height: 48px;
+            &>span{
+                flex-basis: 96px;
+                text-align: right;
+                &:last-child{
+                    margin-left: 100px;
+                    color: @main-text-color2;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

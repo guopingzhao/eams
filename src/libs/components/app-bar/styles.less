@@ -1,0 +1,39 @@
+@import "~styles/vars.less";
+.app-bar{
+  height: .96rem;
+  width: 100%;
+  padding: 0 @pad-size;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  &-item{
+    min-width: 1rem;
+    font-size: .2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    a{
+      color: @main-text-color;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+  .bar-icon{
+    width: .5rem;
+    height: .5rem;
+    font-size: .5rem;
+    margin-bottom: .02rem;
+    ;padding-bottom: .06rem;
+    _::-webkit-full-page-media, _:future, :root .safari_only {
+      padding-bottom: .2rem;
+    }
+    .icon.on{
+      color: @main-color;
+    }
+  }
+}

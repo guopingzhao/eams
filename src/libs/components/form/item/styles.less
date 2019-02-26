@@ -1,0 +1,35 @@
+@import "../../vars.less";
+.@{prefix}-item {
+  position: relative;
+  margin-bottom: 16px;
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+  &-warp {
+    display: flex;
+  }
+  &-label {
+    display: inline-block;
+    line-height: 0.32rem;
+    span {
+      color: #f04134;
+      line-height: 1;
+    }
+  }
+  &-error {
+    float: left;
+    min-height: 18px;
+    color: #f04134;
+    margin-top: 2px;
+    &:after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  &-content {
+    display: inline-block;
+  }
+}

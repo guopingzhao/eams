@@ -1,0 +1,21 @@
+@import "../vars.less";
+@bar: 30px;
+.@{prefix}-editor{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &>.w-e-toolbar{
+    height: @bar !important;
+  }
+  &>.w-e-text-container{
+    min-height: 400px !important;
+    height: auto !important;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    &>.w-e-text{
+      overflow: visible;
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../vars.less";
+.@{prefix}-select{
+  min-width: 1rem;
+  display: inline-block;
+  border: .01rem solid @border-input-color;
+  position: relative;
+  text-align: center;
+  &.border-none{
+    border: none;
+  }
+  .view{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    input{
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: transparent;
+      font-size: inherit;
+      &:focus{
+        color: transparent;
+      }
+    }
+    .icon{
+      transition: all .3s;
+      display: block;
+    }
+    .icon.open{
+      transform: rotateZ(180deg);
+    }
+  }
+  .value{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  .options{
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    max-height: 4rem;
+    transition: all .3s linear;
+    transform: scale(1, 0);
+    transform-origin: top;
+    &.show{
+      transition: all .3s cubic-bezier(0, 1, 1, 1);
+      height: auto;
+      transform: scale(1, 1);
+    }
+  }
+  &-option{
+    border-radius: .03rem;
+    display: flex;
+    align-items: center;
+    height: .56rem;
+    color: @text-color2;
+    background-color: rgba(255, 255, 255, .5);
+    
+    &.on{
+      // background-color: @main-color-active;
+      color: @main-text-color;
+    }
+  }
+  .text-center{
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@keyframes hei {
+  form {
+    height: 0;
+  }
+  to {
+    height: 4rem;
+  }
+}
+@keyframes hei1 {
+  form {
+    height: 4rem;
+  }
+  to {
+    height: 0;
+  }
+}

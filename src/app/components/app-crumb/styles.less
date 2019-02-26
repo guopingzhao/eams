@@ -1,0 +1,32 @@
+@import "~styles/vars.less";
+.app-crumb{
+  display: flex;
+  font-size: @font-size2;
+  background-color: #f7f8f9;
+  height: @app-crumb-height;
+  align-items: center;
+  border-bottom: 1px solid @line-color;
+  width: calc(~"100% +"@pad-size * 2);
+  margin-left: -@pad-size;
+  padding-left: @pad-size;
+  cursor: pointer;
+  label{
+    color: @main-text-color2;
+  }
+  &>div{
+    color: @main-text-color3;
+  }
+  span {
+    color: rgb(81,81,81);
+  }
+  .fuhao {
+    display: inline-block;
+    margin: 0 0.05rem;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .mainColor {
+    color: @main-text-color2;
+  }
+}

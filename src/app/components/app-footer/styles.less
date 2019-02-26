@@ -1,0 +1,26 @@
+@import "~styles/vars.less";
+.app-footer{
+  text-align: center;
+  border-top: 1px solid @line-color;
+  position: relative;
+  color: #b5b5b5;
+  height: @footer-height;
+  line-height: 18px;
+  font-size: @font-size2;
+  &>p:first-child{
+    margin-top: 18px;
+  }
+  &:after,&:before{
+    content: "";
+    position: absolute;
+    width: @pad-size;
+    top: -1px;
+    border-top: 1px solid @line-color;
+  }
+  &:after{
+    right: -@pad-size;
+  }
+  &:before{
+    left: -@pad-size;
+  }
+}

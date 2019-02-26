@@ -1,0 +1,65 @@
+@import "~styles/vars.less";
+.system-user {
+    .own-data{
+        &-body{
+            background-color: #fff;
+            margin-top: 28px;
+            height: 100%;
+            .get-module-body-height;
+        }
+        &-info{
+            p{
+                display: flex;
+                line-height: 32px;
+                margin-top: 0.16rem;
+                .label{
+                    flex-basis: 96px;
+                    text-align: right;
+                }
+                .ps-opera {
+                    color: #0090ff;
+                    cursor: pointer;
+                    width: 2.2rem;
+                    text-indent: 5em;
+                }
+            }
+        }
+        &-password{
+            p{
+                display: flex;
+                line-height: 48px;
+                &>span{
+                    flex-basis: 96px;
+                    text-align: right;
+                    &:last-child{
+                        margin-left: 100px;
+                        color: @main-text-color2;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        margin-top: 0.16rem;
+        .label {
+            padding-right: 0.06rem;
+            width: 0.96rem;
+            text-align: right;
+            color: rgb(81,81,81);
+        }
+        .ant-select {
+            width: 2.2rem;
+
+        }
+        .ant-select-selection {
+            border: 1px solid #EEEEEE;
+        }
+        .ant-input {
+            width: 2.2rem;
+            border: 1px solid #EEEEEE;
+        }
+    }
+}

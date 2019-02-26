@@ -1,0 +1,13 @@
+**/node_modules/
+/build/
+/builds/
+/test/
+**/.vscode/
+**/.idea/
+**/npm-debug.log
+.DS_Store
+debug.log
+cmd.exe
+yarn-error.log
+build.*
+test.*

@@ -1,0 +1,178 @@
+@import "~styles/vars.less";
+.borrow-detail {
+  .relative-div {
+    position: relative;
+    .absolute-div {
+      position: absolute;
+      right: 0;
+      top: 0.15rem;
+      width: 1rem;
+      span {
+        display: inline-block;
+        margin: 0 0.1rem;
+        color: @main-color;
+        cursor: pointer;
+      }
+    }
+  }
+  .title {
+    font-size: 0.16rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  .basic-info {
+    .item-box {
+      padding: 0.1rem 2em 0;
+      >p {
+        display: flex;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        >span:first-child{
+          display: inline-block;
+          width: 2rem;
+        }
+      }
+    }
+  }
+  .file-info {
+    .item-box {
+      padding: 0.1rem 2em 0;
+      .each-item {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        display: flex;
+        >p:first-child {
+          display: flex;
+          width: 3rem;
+          align-items: center;
+        }
+        >p:nth-child(2) {
+          display: flex;
+          align-items: center;
+          width: 2rem;
+          >span {
+            font-size: 0.12rem;
+          }
+          .look {
+            color: @main-color;
+          }
+          .del {
+            color: red;
+          }
+          .line {
+            margin: 0 0.1rem;
+            width: 0.01rem;
+            height: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+  .borrower-info, .other-info {
+    .item-box {
+      padding: 0.1rem 2em 0;
+      .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.15rem;
+        .label {
+          width: 1rem;
+          padding-right: 1.5em;
+          text-align: right;
+        }
+        .decorator-wrap {
+          align-items: center;
+          input {
+            display: inline-block;
+          }
+          .error-info {
+            line-height: 0.34rem;
+            margin-left: 0.1rem;
+            width: 2rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .btn-box {
+    margin: 0.1rem 0 0.3rem;
+    text-align: center;
+    .ant-btn {
+      margin: 0 0.1rem;
+      width: 1rem;
+    }
+  }
+}
+.print-info {
+  position: absolute;
+  z-index: -1;
+  .title {
+    font-size: 0.16rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  .file-info {
+    .item-box {
+      padding: 0.1rem 2em 0;
+      .each-item {
+        height: 0.3rem;
+        line-height: 0.3rem;
+        display: flex;
+        >p:first-child {
+          display: flex;
+          width: 3rem;
+          align-items: center;
+        }
+        >p:nth-child(2) {
+          display: flex;
+          align-items: center;
+          width: 2rem;
+          >span {
+            font-size: 0.12rem;
+          }
+          .look {
+            color: @main-color;
+          }
+          .del {
+            color: red;
+          }
+          .line {
+            margin: 0 0.1rem;
+            width: 0.01rem;
+            height: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+  .borrower-info, .other-info {
+    .item-box {
+      padding: 0.1rem 2em 0;
+      .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.15rem;
+        .label {
+          width: 1rem;
+          padding-right: 1.5em;
+          text-align: right;
+        }
+        .decorator-wrap {
+          align-items: center;
+          input {
+            display: inline-block;
+          }
+          .error-info {
+            line-height: 0.34rem;
+            margin-left: 0.1rem;
+            width: 2rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

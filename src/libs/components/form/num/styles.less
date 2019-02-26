@@ -1,0 +1,33 @@
+@import "../../vars.less";
+.@{prefix}-num{
+  width: 1.92rem;
+  height: .52rem;
+  border: 1px solid #999;
+  border-radius: .06rem;
+  overflow: hidden;
+  .number, .jian, .jia{
+    float: left;
+    height: 100%;
+    line-height: .52rem;
+    text-align: center;
+    font-size: .3rem;    
+  }
+  .jian, .jia{
+    width: calc(~"(100% - 40%) / 2 - 1px");
+    z-index: 2;
+  }
+  .jian{
+     border-right: 1px solid #999;
+  }
+  .jia{
+     border-left: 1px solid #999;
+  }
+  .number{
+    width: 40%;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,61 @@
+@import "../vars.less";
+@bg-color: rgba(64, 64, 64, .85);
+.@{prefix}-tooltip{
+  &-title{
+    position: fixed !important;
+    visibility: hidden;    
+    background-color: @bg-color;
+    color: #fff;
+    border-radius: 4px;
+    transition: all .5s;
+    &:after{
+      content: "";
+      position: absolute;
+    }
+    &.top:after{
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 5px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 5px solid @bg-color;
+    }
+
+    &.bottom:after{
+      top: -5px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 5px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-bottom: 5px solid @bg-color;
+    }
+    &.right:after{
+      left: -5px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 5px;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-right: 5px solid @bg-color;
+    }
+    &.left:after{
+      right: -5px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 5px;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-left: 5px solid @bg-color;
+    }
+
+    &.show{
+      visibility: visible;
+    }
+  }
+}
